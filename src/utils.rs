@@ -118,9 +118,9 @@ impl Vec3 {
         );
     }
 
-    /// Returns the dot product of self and other
-    pub fn dot(&self, rhs: Self) -> f32 {
-        self.x * rhs.x + self.y * rhs.y + self.z * rhs.z
+    /// Returns the dot product of a and b
+    pub fn dot(lhs: &Vec3, rhs: &Vec3) -> f32 {
+        lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z
     }
 
     /// Returns a new unit vector corresponding to the vec

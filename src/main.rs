@@ -1,4 +1,4 @@
-use raytracer::ray::Ray;
+use raytracer::ray::{ray_color, Ray};
 use raytracer::utils::Vec3;
 
 const WIDTH: usize = 200;
@@ -19,7 +19,7 @@ fn main() {
                 origin,
                 lower_left_corner + (horizontal * u) + (vertical * v),
             );
-            let color = ray.color();
+            let color = ray_color(&ray);
             color.write_color();
         }
     }
